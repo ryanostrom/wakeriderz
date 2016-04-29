@@ -1,0 +1,15 @@
+/** Mixins */
+@import 'mixins/bourbon/bourbon';
+@import 'mixins/neat/neat';
+
+/** Global */
+@import 'partials/settings.scss';
+
+/** Partials */
+  /** Mobile */
+  @import 'partials/mobile/base.scss';
+  @import 'partials/mobile/example.scss';
+
+  /** Desktop */
+  @import 'partials/desktop/base.scss';
+  @import 'partials/desktop/example.scss';
