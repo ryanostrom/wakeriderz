@@ -2,7 +2,7 @@
 
 include_once 'includes/main.php';
 
-echo_bootstrap(<<<HTML
+template_layout(<<<HTML
   <div id="social-bar">
     <ul>
       <li>Follow Us</li>
