@@ -23,7 +23,7 @@
 
   	scrollEvent: function() {
   	  this.setDefs(true, false);
-  	  var didScrollVertical = this.$currentTop != this.$previousTop;
+  	  let didScrollVertical = this.$currentTop != this.$previousTop;
 
   	  if (didScrollVertical) {
   	  	this.update();
