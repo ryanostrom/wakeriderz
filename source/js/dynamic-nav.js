@@ -1,5 +1,5 @@
 (function($) {
-  dynamicHeader = {
+  let dynamicNav = {
   	$nav: $('nav'),
 
   	init: function() {
@@ -34,9 +34,9 @@
 
   };
 
-  dynamicHeader.init();
+  dynamicNav.init();
 
   $(window).scroll(function() {
-  	dynamicHeader.scrollEvent();
+  	dynamicNav.scrollEvent();
   });
 })(jQuery);

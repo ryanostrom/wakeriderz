@@ -31,16 +31,16 @@ function installBourbonCli() {
 }
 
 function installBourbonLocal() {
-  if [ ! -d "scss/mixins/bourbon" ]
+  if [ ! -d "source/scss/mixins/bourbon" ]
   then
     display "Installing bourbon to project"
-    cd scss/mixins; bourbon install; cd ../../
+    cd source/scss/mixins; bourbon install; cd ../../../
   fi
 }
 
 function updateBourbon() {
   display "Updating bourbon"
-  cd scss/mixins; bourbon update; cd ../../
+  cd source/scss/mixins; bourbon update; cd ../../../
 }
 
 function installNeatCli() {
@@ -52,16 +52,16 @@ function installNeatCli() {
 }
 
 function installNeatLocal() {
-  if [ ! -d "scss/mixins/neat" ]
+  if [ ! -d "source/scss/mixins/neat" ]
   then
     display "Installing neat to project"
-    cd scss/mixins; neat install; cd ../../
+    cd source/scss/mixins; neat install; cd ../../../
   fi
 }
 
 function updateNeat() {
   display "Updating neat"
-  cd scss/mixins; neat update; cd ../../
+  cd source/scss/mixins; neat update; cd ../../../
 }
 
 
