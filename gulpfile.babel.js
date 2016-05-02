@@ -8,10 +8,10 @@ import sass from 'gulp-ruby-sass';
 import clean from 'gulp-clean';
 import source from 'vinyl-source-stream';
 import glob from 'glob';
-import jshint from 'gulp-jshint';
 import buffer from 'vinyl-buffer';
 import jsminify from 'gulp-minify';
 import browserify from 'browserify';
+import jshint from 'gulp-jshint';
 
 let sourcePath = './source/',
   distPath = './dist/';
