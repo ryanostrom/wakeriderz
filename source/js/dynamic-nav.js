@@ -1,35 +1,72 @@
 (function($) {
   let dynamicNav = {
-  	$nav: $('nav'),
+    navHeight: 45,
+    adjustedHeight: 45 + 1,
+    isDesktop: false,
+    currentTop: false,
+    previousTop: false,
 
-  	init: function() {
- 	    this.setDefs(true, true);
+  	init() {
+ 	    this.setTop();
+      this.setDesktop();
   	  this.update();
   	},
 
-  	setDefs: function(currentTop, previousTop) {
-  	  this.$currentTop = currentTop ? parseFloat($(window).scrollTop()) : this.$currentTop;
-  	  this.$previousTop = previousTop ? this.$currentTop : this.$previousTop;
+    setDesktop() {
+      this.isDesktop = window.innerWidth > 720;
+    },
+
+  	setTop() {
+      this.previousTop = this.currentTop ? this.currentTop : -1;
+  	  this.currentTop = parseFloat($(window).scrollTop());
   	},
 
-  	update: function() {
-      if (this.$currentTop < 82) {
-        this.$nav.addClass('static').removeClass('dynamic');
+  	update() {
+      if (this.isDesktop) {
+        let navIsShowing = this.currentTop <= this.navHeight,
+          navIsFixed;
+
+        if (navIsShowing) {
+          $('#social-bar').css({
+            "transform":`translateY(-${this.currentTop}px)`,
+            "-webkit-transform":`translateY(-${this.currentTop}px)`
+          });
+        }
+        else {
+          $('#social-bar').css({
+            "transform":`translateY(-${this.adjustedHeight}px)`,
+            "-webkit-transform":`translateY(-${this.adjustedHeight}px)`
+          });
+        }
+
+        if (this.currentTop <= this.navHeight) {
+          $('nav').css({
+            "transform":`translateY(-${this.currentTop}px)`,
+            "-webkit-transform":`translateY(-${this.currentTop}px)`
+          });
+        }
+        else {
+          $('nav').css({
+            "transform":`translateY(-${this.adjustedHeight}px)`,
+            "-webkit-transform":`translateY(-${this.adjustedHeight}px)`
+          });          
+        }
       }
       else {
-        this.$nav.removeClass('static').addClass('dynamic');
+        $('#social-bar, nav').css({
+          "transform":`translateY(0px)`,
+          "-webkit-transform":`translateY(0px)`
+        });
       }
   	},
 
-  	scrollEvent: function() {
-  	  this.setDefs(true, false);
-  	  let didScrollVertical = this.$currentTop != this.$previousTop;
+  	scrollEvent() {
+  	  this.setTop();
+  	  let didScrollVertical = this.currentTop !== this.previousTop;
 
   	  if (didScrollVertical) {
   	  	this.update();
 	    }
-
-	   this.setDefs(false, true);
   	}
 
   };
@@ -39,4 +76,10 @@
   $(window).scroll(function() {
   	dynamicNav.scrollEvent();
   });
+
+  $(window).resize(function() {
+    dynamicNav.setDesktop();
+    dynamicNav.scrollEvent();
+  });
+
 })(jQuery);

@@ -1,0 +1,21 @@
+@include media($desktop) {
+
+	.hero {
+		height: 500px;
+
+    figure {
+      height: 500px
+    }
+
+		.hero-inner {
+			height: 250px;
+		}
+
+	  .slide {
+	    background-position: center center;
+	    background-attachment: fixed !important;
+      height: 500px;
+	  }
+	}  
+
+}

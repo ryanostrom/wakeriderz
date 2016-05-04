@@ -1,32 +1,40 @@
 <?php
 
 date_default_timezone_set('America/Chicago');
+// <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+// <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 function template_layout($html) {
   echo <<<HTML
     <html>
       <head>
         <title>WakeRiderz</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="../tmp/jquery.js"></script>
         <script src="../dist/js/app-min.js"></script>
         <link rel="stylesheet" href="../dist/css/app.min.css" type="text/css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../tmp/font-awesome.min.css">
       </head>
       <body>
+        <div id="social-bar">
+          <ul>
+            <li><a href="https://www.facebook.com/Wake-Riderz-1714558198760355/" data-tip="bottom" data-original-title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/home?status=Check%20out%20Wake%20Riderz!%20Lake%20Austin%20Boat%20Rentals!%20http%3A//www.wakeriderz.com" data-tip="bottom" data-original-title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://plus.google.com/share?url=http%3A//www.wakeriderz.com/lakeaustinboatrentals" data-tip="bottom" data-original-title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A//www.wakeriderz.com&amp;title=lake%20austin%20boat%20rentals&amp;summary=Wake%20Riderz%20provides%20boat%20rentals%20in%20lake%20austin,%20lake%20travis%20and%20lago%20vista.&amp;source=" data-tip="bottom" data-original-title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+          <p>Follow us</p>
+        </div>
         <nav>
           <div id="logo">
             <a href="/"><img src="/dist/files/logo.jpg" alt="Logo"></a>
           </div>
-          <div id="header-links">
-            <div id="header-links-inner">
-              <ul class="menu">
-                <li class="active link"><a href="/">Home</a></li>
-                <li class="link"><a href="/contacts/">Contacts</a></li>
-                <li class="link"><a href="/resources/">Resources</a></li>
-                <li class="link"><a href="/lakeaustinboatrentals/">Services</a></li>
-              </ul>
-            </div>
-          </div>
+          <div id="menu" role="toggle-ul" data-ul-id="links"><i class="fa fa-bars"></i></div>
+          <ul id="links">
+            <li><a class="link active" href="/">Home</a></li>
+            <li><a class="link" href="/contacts/">Contacts</a></li>
+            <li><a class="link" href="/resources/">Resources</a></li>
+            <li><a class="link" href="/lakeaustinboatrentals/">Services</a></li>
+          </ul>
         </nav>
         <main>{$html}</main>
       </body>

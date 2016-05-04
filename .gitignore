@@ -5,3 +5,5 @@ dist/css/
 dist/js/
 bourbon/
 neat/
+tmp/
+.DS_Store

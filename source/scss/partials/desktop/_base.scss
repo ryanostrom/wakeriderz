@@ -1,5 +1,59 @@
 @include media($desktop) {
 
+  #social-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
 
+  nav {
+    height: 89px;
+    top: 0;
+    margin-top: 45px;
+    position: fixed;
+
+    #logo {
+      float: left;
+      text-align: none;  
+
+      img {
+        max-height: 65px;
+      }
+    }
+
+    #menu {
+      display: none;
+    }
+
+    #links {
+      display: inline-block;
+      float: right;
+      clear: none;
+
+      li {
+        display: inline-block;
+        text-align: none;
+        margin: 0;
+        background: none;
+
+        a {
+          color: #555;
+          font-weight: 500;
+        }
+
+        &:hover {
+          background: none;
+          a {
+            color: #166B8E;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    margin: 134px 0 0;
+  }
 
 }

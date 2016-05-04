@@ -1,0 +1,83 @@
+.hero {
+	width: 100%;
+	height: 200px;
+	position: relative;
+  overflow: hidden;
+
+  figure {
+    position: relative;
+    width: 300%;
+    height: 200px;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    animation: 15s slider infinite; 
+
+    .slide {
+      width: 33.33%;
+      float: left;
+    }
+  }
+
+	.hero-inner {
+		height: 100px;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: absolute;
+		margin: auto;
+		text-align: center;
+
+    .content {
+      width: 33%;
+      position: absolute;
+      color: white;
+      text-shadow: 1px 1px 1px #555;
+      padding: 0 24px;
+    }
+	}
+
+  .slide {
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 200px;
+
+    &.slide-1 {
+      background-image: url("../files/tige.jpg");
+
+      .content {
+        left: 0;
+      }
+    }
+
+    &.slide-2 {
+      background-image: url("../files/tubing.jpg");      
+
+      .content {
+        left: 33.33%;
+      }
+    }
+
+    &.slide-3 {
+      background-image: url("../files/wakeboard.jpg");      
+
+      .content {
+        left: 66.67%;
+      }
+    }
+  }
+}
+
+@keyframes slider {
+  0% { left: 0%; }
+  32% { left: 0%; }
+  36% { left: -100%; }
+  64% { left: -100%; }
+  68% { left: -200%; }
+  100% { left: -200%; }
+}

@@ -3,13 +3,21 @@
 # Provisions dependencies for local resource compilation
 
 function display() {
-    echo "-----> $1"
+  echo "-----> $1"
+}
+
+function installNvmCli() {
+  if [ ! `which nvm` ]
+  then
+    display "Installing nvm to system"
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
+  fi
 }
 
 function installGulpCli() {
   if [ ! `npm gulp -v` ]
   then
-    display "Installing gulp"
+    display "Installing gulp to system"
     npm install -g gulp
   fi
 }
@@ -83,6 +91,7 @@ function runGulp() {
   gulp
 }
 
+installNvmCli
 installGulpCli
 installBabelCli
 installBourbonCli

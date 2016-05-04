@@ -2,15 +2,105 @@
 
 include_once 'includes/main.php';
 
+$hero_slides = render_slider();
+$sections = render_sections();
+
 template_layout(<<<HTML
-  <div id="social-bar">
-    <ul>
-      <li>Follow Us</li>
-      <li><a href="https://www.facebook.com/Wake-Riderz-1714558198760355/" data-tip="bottom" data-original-title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="https://twitter.com/home?status=Check%20out%20Wake%20Riderz!%20Lake%20Austin%20Boat%20Rentals!%20http%3A//www.wakeriderz.com" data-tip="bottom" data-original-title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="https://plus.google.com/share?url=http%3A//www.wakeriderz.com/lakeaustinboatrentals" data-tip="bottom" data-original-title="Google+" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-      <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A//www.wakeriderz.com&amp;title=lake%20austin%20boat%20rentals&amp;summary=Wake%20Riderz%20provides%20boat%20rentals%20in%20lake%20austin,%20lake%20travis%20and%20lago%20vista.&amp;source=" data-tip="bottom" data-original-title="LinkedIn" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-    </ul>
-  </div>
+  {$hero_slides}
+  {$sections}
 HTML
 );
+
+function render_sections() {
+  $sections = array(
+    array(
+      'title' => 'Tige 24VE',
+      'description' => 'Wake Boarding and Wake Surfing',
+      'list' => array(
+        '$165.00 per hour',
+        'Seating capacity 13',
+      ),
+    ),
+    array(
+      'title' => 'Pontoon Party Barge',
+      'description' => 'Friends, Families and Special Occassions',
+      'list' => array(
+        '$145.00 per hour',
+        'Seating capacity 16',
+      ),
+    ),
+  );
+
+  return implode('', array_map(function($section, $key) {
+    $counter = $key + 1;
+    return build_section($section, $counter);
+  }, $sections, array_keys($sections)));
+}
+
+function build_section($section, $counter) {
+  $items = implode('', array_map(function($item) {
+    return <<<HTML
+      <li>{$item}</li>
+HTML;
+  }, $section['list']));
+
+  return <<<HTML
+    <section id="item-fold">
+      <div id="background" class="background-{$counter}">
+        <div id="inner-background">
+          <h2>{$section['title']}</h2>
+          <p>{$section['description']}</p>
+        </div>
+      </div>
+      <div id="content">
+        <div id="inner-content">
+          <ul>{$items}</ul>
+        </div>
+      </div>
+    </section>
+HTML;
+}
+
+function render_slider() {
+  $slides = array(
+    array(
+      'title' => 'Lake Austin Boat Rentals',
+      'description' => 'We will make sure that your family and friends have a blast on the water! Our boat captains have many years of boating experience!',
+    ),
+    array(
+      'title' => 'Lago Vista Boat Rentals',
+      'description' => 'We have the perfect boat for Wake Boarding, Wake Surfing and Water Tubing!
+',
+    ),
+    array(
+      'title' => 'Lake Austin Boat Rentals',
+      'description' => 'Unforgettable Experience! Thank you for choosing Wake Riderz!',
+    ),
+  );
+
+  $slides = implode('', array_map(function($slide, $key) {
+    $counter = $key + 1;
+    return build_slide($slide, $counter);    
+  }, $slides, array_keys($slides)));
+
+  return <<<HTML
+    <div class="hero">
+      <figure>
+        {$slides}
+      </figure>
+    </div>
+HTML;
+}
+
+function build_slide($slide, $counter) {
+  return <<<HTML
+    <div class="slide slide-{$counter}">
+      <div class="hero-inner">
+        <div class="content">
+          <h2>{$slide['title']}</h2>
+          <p class="description">{$slide['description']}</p>
+        </div>
+      </div>
+    </div>
+HTML;
+}

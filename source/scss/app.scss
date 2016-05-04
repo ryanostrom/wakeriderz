@@ -8,8 +8,12 @@
 /** Partials */
   /** Mobile */
   @import 'partials/mobile/base.scss';
-  @import 'partials/mobile/example.scss';
+  @import 'partials/mobile/index.scss';
+  @import 'partials/mobile/slider.scss';
+  @import 'partials/mobile/sections.scss';
 
   /** Desktop */
   @import 'partials/desktop/base.scss';
-  @import 'partials/desktop/example.scss';
+  @import 'partials/desktop/index.scss';
+  @import 'partials/desktop/slider.scss';
+  @import 'partials/desktop/sections.scss';

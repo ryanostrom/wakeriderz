@@ -47,7 +47,7 @@ gulp.task('js', [ 'clean' ], () => {
   browserify({entries: entries, debug: true})
     .transform('babelify')
     .bundle()
-    .on('error', (err) => console.error(err) )
+    .on('error', (err) => console.error(err))
     .pipe(source(`app.js`))
     .pipe(buffer())    
     .pipe(jsminify())
@@ -55,7 +55,7 @@ gulp.task('js', [ 'clean' ], () => {
 
 });
 
-gulp.task('watch', [ 'sass' ], () => {
+gulp.task('watch', [ 'sass', 'js' ], () => {
 
   gulp.watch(`${sourcePath}scss/**/**/*.scss`, ['sass']);
   gulp.watch(`${sourcePath}js/*.js`, ['js']);
