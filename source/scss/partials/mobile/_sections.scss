@@ -1,24 +1,41 @@
 #item-fold {
 
+  &:last-child {
+    border-top: 1px solid #ccc;
+
+    ul {
+      padding: 0 30px 0 60px !important;
+
+      li {
+        font-size: 16px !important;
+        text-align: justify !important;
+      }
+    }
+  }
+
 	#background {
+    position: relative;
     background-repeat: no-repeat;
     background-attachment: initial;
+    background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 300px;
+    min-height: 300px;
 
     &.background-1 {
-      background-image: url("../files/tige_thumb.jpg");
+      background-image: url("../files/tige.jpg");
     }
 
     &.background-2 {
-      background-image: url("../files/pontoon1-thumb.jpg");
+      background-image: url("../files/pontoon.jpg");
     }
 
 		#inner-background {
-      height: 200px;
+      display: table;
+      width: 100%;
+      height: auto;
       top: 0;
       bottom: 0;
       left: 0;
@@ -26,33 +43,28 @@
       position: absolute;
       margin: auto;
       text-align: center;
-
-			h2, p {
-
-			}
-
-			h2 {
-
-			}
-
-			p {
-
-			}
 		}
 	}
 
 	#content {
-    min-height: 300px;
-    padding: 24px 10%;
+    display: table;
+    margin: auto;
+    padding: 0;
 
 		#inner-content {
+      margin-top: 34.860px;
+      margin-bottom: 34.860px;
+      text-align: center;
 
 			ul {
-
+        padding-left: 15px;
 			}
 
 			li {
-        list-style: none;
+        color: #555;
+        font-size: 20px;
+        text-align: left;
+        margin: 12px 0;
 			}
 		}
 	}

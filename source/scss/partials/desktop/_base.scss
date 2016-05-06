@@ -7,11 +7,26 @@
     z-index: 1;
   }
 
+  h2 {
+    font-size: 42px;
+  }
+
+  p.shadow.full-only {
+    display: table;
+  }
+
+  .button {
+    margin: 0;
+    display: inline-block;
+    width: initial;
+  }
+
   nav {
     height: 89px;
     top: 0;
     margin-top: 45px;
     position: fixed;
+    box-shadow: 0px -2px 8px black;
 
     #logo {
       float: left;
@@ -35,19 +50,6 @@
         display: inline-block;
         text-align: none;
         margin: 0;
-        background: none;
-
-        a {
-          color: #555;
-          font-weight: 500;
-        }
-
-        &:hover {
-          background: none;
-          a {
-            color: #166B8E;
-          }
-        }
       }
     }
   }

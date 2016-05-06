@@ -9,10 +9,13 @@ function template_layout($html) {
     <html>
       <head>
         <title>WakeRiderz</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="initial-scale=1.0">
         <script src="../tmp/jquery.js"></script>
         <script src="../dist/js/app-min.js"></script>
         <link rel="stylesheet" href="../dist/css/app.min.css" type="text/css">
         <link rel="stylesheet" href="../tmp/font-awesome.min.css">
+        <link rel="shortcut icon" href="../dist/files/favicon.ico" type="image/vnd.microsoft.icon">
       </head>
       <body>
         <div id="social-bar">
@@ -31,12 +34,23 @@ function template_layout($html) {
           <div id="menu" role="toggle-ul" data-ul-id="links"><i class="fa fa-bars"></i></div>
           <ul id="links">
             <li><a class="link active" href="/">Home</a></li>
-            <li><a class="link" href="/contacts/">Contacts</a></li>
-            <li><a class="link" href="/resources/">Resources</a></li>
-            <li><a class="link" href="/lakeaustinboatrentals/">Services</a></li>
+            <li><a class="link" href="/about/">About</a></li>
+            <li><a class="link" href="/contact/">Contact</a></li>
           </ul>
         </nav>
         <main>{$html}</main>
+        <footer>
+          <div id="logo">
+            <a href="/"><img src="/dist/files/logo.jpg" alt="Logo"></a>
+          </div>
+          <p>Copyright &copy; 2016 WakeRiderz. All rights reserved.</p>
+          <ul id="links">
+            <li><a class="link active" href="/">Home</a></li>
+            <li><a class="link" href="/about/">About</a></li>
+            <li><a class="link" href="/contact/">Contact</a></li>
+          </ul>
+        </footer>
+
       </body>
     </html>
 HTML;

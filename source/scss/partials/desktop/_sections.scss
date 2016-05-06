@@ -2,9 +2,27 @@
 
 	#item-fold {
 
+	  &:last-child {
+	    border-top: 1px solid #ccc;
+	    ul {
+	      padding: 0 0px 0 40px !important;
+	    }
+
+	    li {
+	      font-size: 20px !important;
+	      text-align: left !important;
+	    }
+	  }
+
 		#background {
+		    background-position: center center;
+		    background-attachment: fixed !important;
+		    max-height: 300px;
 
 			#inner-background {
+				height: 200px;
+				display: initial;
+				widows: initial;
 
 				h2, p {
 
@@ -21,6 +39,7 @@
 		}
 
 		#content {
+      padding: 24px 10%;
 
 			#inner-content {
 
@@ -29,7 +48,7 @@
 				}
 
 				li {
-
+					padding-left: 40px;
 				}
 			}
 		}

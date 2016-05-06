@@ -32,14 +32,13 @@
     .content {
       width: 33%;
       position: absolute;
-      color: white;
-      text-shadow: 1px 1px 1px #555;
-      padding: 0 24px;
+      padding: 0 2%;
     }
 	}
 
   .slide {
     background-repeat: no-repeat;
+    background-position: center center;
     background-attachment: initial;
     -webkit-background-size: cover;
     -moz-background-size: cover;

@@ -7,7 +7,29 @@ $sections = render_sections();
 
 template_layout(<<<HTML
   {$hero_slides}
+  <section id="item-fold">
+    <div id="content">
+      <div id="inner-content">
+        <h2>Book your boat!</h2>
+        <div class="button primary"><a href="mailto:5127109253@vtext.com">512.710.9253</a></div>
+        <div class="button primary"><a href="mailto:info@wakeriderz.com">info@wakeriderz.com></a></div>
+      </div>
+    </div>
+  </section>
   {$sections}
+  <section id="item-fold">
+    <div id="content">
+      <div id="inner-content">
+        <h2>Booking Details</h2>
+        <ul>
+          <li>All boats include captain</li>
+          <li>4 hour minumum on weekends</li>
+          <li>2 hour minumum on weekdays</li>
+          <li>Call, text or email to reserve</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 HTML
 );
 
@@ -17,6 +39,7 @@ function render_sections() {
       'title' => 'Tige 24VE',
       'description' => 'Wake Boarding and Wake Surfing',
       'list' => array(
+        'Includes a captain',
         '$165.00 per hour',
         'Seating capacity 13',
       ),
@@ -25,6 +48,7 @@ function render_sections() {
       'title' => 'Pontoon Party Barge',
       'description' => 'Friends, Families and Special Occassions',
       'list' => array(
+        'Includes a captain',
         '$145.00 per hour',
         'Seating capacity 16',
       ),
@@ -48,8 +72,8 @@ HTML;
     <section id="item-fold">
       <div id="background" class="background-{$counter}">
         <div id="inner-background">
-          <h2>{$section['title']}</h2>
-          <p>{$section['description']}</p>
+          <h2 class="invert shadow">{$section['title']}</h2>
+          <p class="invert shadow">{$section['description']}</p>
         </div>
       </div>
       <div id="content">
@@ -97,8 +121,8 @@ function build_slide($slide, $counter) {
     <div class="slide slide-{$counter}">
       <div class="hero-inner">
         <div class="content">
-          <h2>{$slide['title']}</h2>
-          <p class="description">{$slide['description']}</p>
+          <h2 class="invert shadow">{$slide['title']}</h2>
+          <p class="invert shadow full-only">{$slide['description']}</p>
         </div>
       </div>
     </div>
