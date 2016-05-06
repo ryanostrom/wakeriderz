@@ -2,7 +2,7 @@
 
 date_default_timezone_set('America/Chicago');
 
-$path = true ? "/wakeriderz" : "..";
+$path = true === true ? "/wakeriderz" : "..";
 
 function template_layout($html) {
   echo <<<HTML
