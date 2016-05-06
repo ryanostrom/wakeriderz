@@ -29,7 +29,7 @@ function template_layout($html) {
         </div>
         <nav>
           <div id="logo">
-            <a href="/"><img src="/dist/files/logo.jpg" alt="Logo"></a>
+            <a href="/"><img src="/wakeriderz/dist/files/logo.jpg" alt="Logo"></a>
           </div>
           <div id="menu" role="toggle-ul" data-ul-id="links"><i class="fa fa-bars"></i></div>
           <ul id="links">
