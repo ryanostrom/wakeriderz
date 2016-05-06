@@ -41,7 +41,7 @@ function template_layout($html) {
         <main>{$html}</main>
         <footer>
           <div id="logo">
-            <a href="/"><img src="/dist/files/logo.jpg" alt="Logo"></a>
+            <a href="/"><img src="/wakeriderz/dist/files/logo.jpg" alt="Logo"></a>
           </div>
           <p>Copyright &copy; 2016 WakeRiderz. All rights reserved.</p>
           <ul id="links">
