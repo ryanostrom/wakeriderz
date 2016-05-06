@@ -1,8 +1,6 @@
 <?php
 
 date_default_timezone_set('America/Chicago');
-// <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-// <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 function template_layout($html) {
   echo <<<HTML
@@ -11,10 +9,10 @@ function template_layout($html) {
         <title>WakeRiderz</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="initial-scale=1.0">
-        <script src="../tmp/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="../dist/js/app-min.js"></script>
         <link rel="stylesheet" href="../dist/css/app.min.css" type="text/css">
-        <link rel="stylesheet" href="../tmp/font-awesome.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="../dist/files/favicon.ico" type="image/vnd.microsoft.icon">
       </head>
       <body>
