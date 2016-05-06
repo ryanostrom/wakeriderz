@@ -12,10 +12,10 @@ function template_layout($html) {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="{$path}/dist/js/app-min.js"></script>
-        <link rel="stylesheet" href="{$path}/dist/css/app.min.css" type="text/css">
+        <script src="/wakeriderz/dist/js/app-min.js"></script>
+        <link rel="stylesheet" href="/wakeriderz/dist/css/app.min.css" type="text/css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <link rel="shortcut icon" href="{$path}/dist/files/favicon.ico" type="image/vnd.microsoft.icon">
+        <link rel="shortcut icon" href="/wakeriderz/dist/files/favicon.ico" type="image/vnd.microsoft.icon">
       </head>
       <body>
         <div id="social-bar">
