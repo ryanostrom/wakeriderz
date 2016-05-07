@@ -41,6 +41,11 @@ function installBourbonCli() {
 function installBourbonLocal() {
   if [ ! -d "source/scss/mixins/bourbon" ]
   then
+    if [ ! -d "source/scss/mixins" ]
+    then
+      mkdir source/scss/mixins
+    fi
+    
     display "Installing bourbon to project"
     cd source/scss/mixins; bourbon install; cd ../../../
   fi

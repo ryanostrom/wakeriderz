@@ -12,7 +12,7 @@ template_layout(<<<HTML
       <div id="inner-content">
         <h2>Book your boat!</h2>
         <div class="button primary"><a href="mailto:5127109253@vtext.com">512.710.9253</a></div>
-        <div class="button primary"><a href="mailto:info@wakeriderz.com">info@wakeriderz.com></a></div>
+        <div class="button primary"><a href="mailto:info@wakeriderz.com">info@wakeriderz.com</a></div>
       </div>
     </div>
   </section>

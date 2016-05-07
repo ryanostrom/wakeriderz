@@ -2,8 +2,6 @@
 
 date_default_timezone_set('America/Chicago');
 
-$path = true === true ? "http://ryandevelops.com/wakeriderz" : "..";
-
 function template_layout($html) {
   echo <<<HTML
     <html>
@@ -12,10 +10,10 @@ function template_layout($html) {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="http://ryandevelops.com/wakeriderz/dist/js/app-min.js"></script>
-        <link rel="stylesheet" href="http://ryandevelops.com/wakeriderz/dist/css/app.min.css" type="text/css">
+        <script src="../dist/js/app-min.js"></script>
+        <link rel="stylesheet" href="../dist/css/app.min.css" type="text/css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <link rel="shortcut icon" href="http://ryandevelops.com/wakeriderz/dist/files/favicon.ico" type="image/vnd.microsoft.icon">
+        <link rel="shortcut icon" href="../dist/files/favicon.ico" type="image/vnd.microsoft.icon">
       </head>
       <body>
         <div id="social-bar">
@@ -29,25 +27,25 @@ function template_layout($html) {
         </div>
         <nav>
           <div id="logo">
-            <a href="/"><img src="http://ryandevelops.com/wakeriderz/dist/files/logo.jpg" alt="Logo"></a>
+            <a href="/"><img src="../dist/files/logo.jpg" alt="Logo"></a>
           </div>
           <div id="menu" role="toggle-ul" data-ul-id="links"><i class="fa fa-bars"></i></div>
           <ul id="links">
-            <li><a class="link active" href="http://ryandevelops.com/wakeriderz/">Home</a></li>
-            <li><a class="link" href="http://ryandevelops.com/wakeriderz/about.php">About</a></li>
-            <li><a class="link" href="http://ryandevelops.com/wakeriderz/contact.php">Contact</a></li>
+            <li><a class="link active" href="../">Home</a></li>
+            <li><a class="link" href="../about.php">About</a></li>
+            <li><a class="link" href="../contact.php">Contact</a></li>
           </ul>
         </nav>
         <main>{$html}</main>
         <footer>
           <div id="logo">
-            <a href="/"><img src="http://ryandevelops.com/wakeriderz/dist/files/logo.jpg" alt="Logo"></a>
+            <a href="/"><img src="../dist/files/logo.jpg" alt="Logo"></a>
           </div>
           <p>Copyright &copy; 2016 WakeRiderz. All rights reserved.</p>
           <ul id="links">
-            <li><a class="link active" href="http://ryandevelops.com/wakeriderz/">Home</a></li>
-            <li><a class="link" href="http://ryandevelops.com/wakeriderz/about.php">About</a></li>
-            <li><a class="link" href="http://ryandevelops.com/wakeriderz/contact.php">Contact</a></li>
+            <li><a class="link active" href="../">Home</a></li>
+            <li><a class="link" href="../about.php">About</a></li>
+            <li><a class="link" href="../contact.php">Contact</a></li>
           </ul>
         </footer>
 
