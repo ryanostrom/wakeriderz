@@ -8,9 +8,13 @@ function template_layout($html) {
   echo <<<HTML
     <html>
       <head>
-        <title>WakeRiderz</title>
+        <title>Lake Austin Boat Rentals - Lake Travis Boat Rentals - Wake Surfing</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="initial-scale=1.0">
+        <meta name="description" content="LAKE AUSTIN – LAKE TRAVIS AND LAGO VISTA BOAT RENTALS. FOR RESERVATIONS CALL: (512) 809-7742 ">
+        <meta name="keywords" content="lake austin boat rentals, lake travis boat rentals, lago vista boat rentals, wake boarding, water tubing, wake surfing, boat rentals, captain, austin boat, wake riderz  ">
+        <meta name="robots" content="noodp,noydir">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="http://ryandevelops.com/wakeriderz/dist/js/app-min.js"></script>
         <link rel="stylesheet" href="http://ryandevelops.com/wakeriderz/dist/css/app.min.css" type="text/css">
