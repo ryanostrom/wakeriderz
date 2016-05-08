@@ -1,8 +1,6 @@
 Config.php
 .sass-cache/
 node_modules/
-dist/css/
-dist/js/
 bourbon/
 neat/
 tmp/
