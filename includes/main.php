@@ -12,7 +12,7 @@ function template_layout($html) {
         <meta name="description" content="LAKE AUSTIN – LAKE TRAVIS AND LAGO VISTA BOAT RENTALS. FOR RESERVATIONS CALL: (512) 809-7742 ">
         <meta name="keywords" content="lake austin boat rentals, lake travis boat rentals, lago vista boat rentals, wake boarding, water tubing, wake surfing, boat rentals, captain, austin boat, wake riderz  ">
         <meta name="robots" content="noodp,noydir">
-
+        <meta name="google-site-verification" content="Pw5aXi241wm4Ab3WHEcmaL4-4WdkDkmxjFKrkK3HDzM" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="../dist/js/app-min.js"></script>
         <link rel="stylesheet" href="../dist/css/app.min.css" type="text/css">
