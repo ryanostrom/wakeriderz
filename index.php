@@ -78,6 +78,8 @@ HTML;
       </div>
       <div id="content">
         <div id="inner-content">
+          <h2 class="invert shadow">{$section['title']}</h2>
+          <p class="invert shadow">{$section['description']}</p>
           <ul>{$items}</ul>
         </div>
       </div>
@@ -92,12 +94,11 @@ function render_slider() {
       'description' => 'We will make sure that your family and friends have a blast on the water! Our boat captains have many years of boating experience!',
     ),
     array(
-      'title' => 'Lago Vista Boat Rentals',
-      'description' => 'We have the perfect boat for Wake Boarding, Wake Surfing and Water Tubing!
-',
+      'title' => 'Lake Travis Boat Rentals',
+      'description' => 'We have the perfect boat for Wake Boarding, Wake Surfing and Water Tubing!',
     ),
     array(
-      'title' => 'Lake Austin Boat Rentals',
+      'title' => 'Lago Vista Boat Rentals',
       'description' => 'Unforgettable Experience! Thank you for choosing Wake Riderz!',
     ),
   );

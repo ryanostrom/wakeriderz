@@ -17,7 +17,7 @@
 		#background {
 		    background-position: center center;
 		    background-attachment: fixed !important;
-		    max-height: 300px;
+        height: 300px;
 
 			#inner-background {
 				height: 200px;
@@ -42,6 +42,9 @@
       padding: 24px 10%;
 
 			#inner-content {
+				h2, p {
+					display: none;
+				}
 
 				ul {
 					
@@ -49,6 +52,8 @@
 
 				li {
 					padding-left: 40px;
+          list-style: initial;
+          text-align: left;
 				}
 			}
 		}

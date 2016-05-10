@@ -294,13 +294,13 @@ footer #links li a {
   left: 0;
 }
 .hero .slide.slide-2 {
-  background-image: url("../files/tubing.jpg");
+  background-image: url("../files/wakeboard.jpg");
 }
 .hero .slide.slide-2 .content {
   left: 33.33%;
 }
 .hero .slide.slide-3 {
-  background-image: url("../files/wakeboard.jpg");
+  background-image: url("../files/tubing.jpg");
 }
 .hero .slide.slide-3 .content {
   left: 66.67%;
@@ -363,7 +363,7 @@ footer #links li a {
   background-attachment: initial;
   background-position: center center;
   background-size: cover;
-  min-height: 300px;
+  min-height: 200px;
 }
 #item-fold #background.background-1 {
   background-image: url("../files/tige.jpg");
@@ -372,7 +372,7 @@ footer #links li a {
   background-image: url("../files/pontoon.jpg");
 }
 #item-fold #background #inner-background {
-  display: table;
+  display: none;
   width: 100%;
   height: auto;
   top: 0;
@@ -399,8 +399,9 @@ footer #links li a {
 #item-fold #content #inner-content li {
   color: #555;
   font-size: 20px;
-  text-align: left;
   margin: 12px 0;
+  list-style: none;
+  text-align: center;
 }
 
 /** Desktop */
@@ -495,7 +496,7 @@ iframe {
   #item-fold #background {
     background-position: center center;
     background-attachment: fixed !important;
-    max-height: 300px;
+    height: 300px;
   }
   #item-fold #background #inner-background {
     height: 200px;
@@ -505,7 +506,12 @@ iframe {
   #item-fold #content {
     padding: 24px 10%;
   }
+  #item-fold #content #inner-content h2, #item-fold #content #inner-content p {
+    display: none;
+  }
   #item-fold #content #inner-content li {
     padding-left: 40px;
+    list-style: initial;
+    text-align: left;
   }
 }

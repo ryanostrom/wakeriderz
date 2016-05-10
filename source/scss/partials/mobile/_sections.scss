@@ -22,7 +22,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 300px;
+    min-height: 200px;
 
     &.background-1 {
       background-image: url("../files/tige.jpg");
@@ -33,7 +33,7 @@
     }
 
 		#inner-background {
-      display: table;
+      display: none;
       width: 100%;
       height: auto;
       top: 0;
@@ -63,8 +63,9 @@
 			li {
         color: #555;
         font-size: 20px;
-        text-align: left;
         margin: 12px 0;
+        list-style: none;
+        text-align: center;
 			}
 		}
 	}

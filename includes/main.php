@@ -36,8 +36,8 @@ function template_layout($html) {
           <div id="menu" role="toggle-ul" data-ul-id="links"><i class="fa fa-bars"></i></div>
           <ul id="links">
             <li><a class="link active" href="../">Home</a></li>
-            <li><a class="link" href="../about.php">About</a></li>
-            <li><a class="link" href="../contact.php">Contact</a></li>
+            <li><a class="link" href="../about/">About</a></li>
+            <li><a class="link" href="../contact/">Contact</a></li>
           </ul>
         </nav>
         <main>{$html}</main>
@@ -48,8 +48,8 @@ function template_layout($html) {
           <p>Copyright &copy; 2016 WakeRiderz. All rights reserved.</p>
           <ul id="links">
             <li><a class="link active" href="../">Home</a></li>
-            <li><a class="link" href="../about.php">About</a></li>
-            <li><a class="link" href="../contact.php">Contact</a></li>
+            <li><a class="link" href="../about/">About</a></li>
+            <li><a class="link" href="../contact/">Contact</a></li>
           </ul>
         </footer>
 
